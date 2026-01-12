@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1e293b" />
+  <meta name="color-scheme" content="light dark" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Contractor's Instant Quote Calculator | Free No-Login Freelance Estimator</title>
+  <meta name="description" content="Free instant quote calculator for contractors and freelancers. No login required. Adjust hourly rate, hours, materials, tax, and profit margin to generate professional client-ready estimates in seconds. Perfect for designers, handymen, writers, and general contractors." />
+  <meta name="keywords" content="quote calculator, contractor estimate, freelance pricing, project estimate tool, quotation generator, contractor tools, freelance estimator, instant quote, hourly rate calculator" />
+  <meta name="author" content="Contractor's Instant Quote" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  
+  <!-- Canonical URL (update to your domain) -->
+  <link rel="canonical" href="https://contractors-instant-quote.com" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://contractors-instant-quote.com" />
+  <meta property="og:title" content="Contractor's Instant Quote Calculator | Free Freelance Estimator" />
+  <meta property="og:description" content="Generate professional project quotes instantly. No login needed. Perfect for contractors, designers, handymen, and freelance writers." />
+  <meta property="og:image" content="https://contractors-instant-quote.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Contractor's Instant Quote" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://contractors-instant-quote.com" />
+  <meta property="twitter:title" content="Contractor's Instant Quote Calculator | Free Freelance Estimator" />
+  <meta property="twitter:description" content="Generate professional project quotes instantly. No login needed. Perfect for contractors, designers, handymen, and freelance writers." />
+  <meta property="twitter:image" content="https://contractors-instant-quote.com/og-image.png" />
+  
+  <!-- Mobile Web App -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Quote Calculator" />
+  
+  <!-- Preload and DNS Prefetch for Performance -->
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text x=%225%22 y=%2225%22 font-size=%2224%22>💰</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 180%22><text x=%2245%22 y=%22135%22 font-size=%22120%22>💰</text></svg>" />
+  
+  <!-- Structured Data - Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Contractor's Instant Quote Calculator",
+    "description": "Free instant quote calculator for contractors, freelancers, designers, and handymen. No login required.",
+    "url": "https://contractors-instant-quote.com",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Contractor's Instant Quote"
+    },
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "screenshot": "https://contractors-instant-quote.com/screenshot.png",
+    "softwareHelp": {
+      "@type": "CreativeWork",
+      "url": "https://contractors-instant-quote.com"
+    }
+  }
+  </script>
+
+  <!-- Additional Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Contractor's Instant Quote",
+    "url": "https://contractors-instant-quote.com",
+    "description": "Free quote calculator for contractors and freelancers",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "url": "https://contractors-instant-quote.com"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    .slider-input::-webkit-slider-thumb {
+      @apply bg-blue-600;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased">
+  <header class="border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-20">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+      <div>
+        <h1 class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900">Contractor's Instant Quote</h1>
+        <p class="text-xs sm:text-sm text-slate-600">No-login, no sign-up. Open during a call, punch in numbers, sound professional.</p>
+      </div>
+      <span class="hidden sm:inline-flex text-[10px] uppercase tracking-wide font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-full px-3 py-1">Free • No account</span>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 sm:py-10 grid gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(260px,2fr)] items-start">
+    <!-- Calculator Panel -->
+    <section aria-label="Quote calculator" class="space-y-6">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-3">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-900">Instant Project Estimate</h2>
+            <p class="text-xs sm:text-sm text-slate-600">Adjust the sliders or type in exact values. Your total updates in real-time.</p>
+          </div>
+          <button id="resetBtn" type="button" class="text-xs font-medium text-slate-600 hover:text-slate-900 border border-slate-200 hover:border-slate-300 rounded-full px-3 py-1">Reset</button>
+        </div>
+
+        <!-- Inputs grid -->
+        <div class="grid gap-5 sm:grid-cols-2">
+          <!-- Hourly rate -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-medium text-slate-700">
+              <label for="hourlyRate" class="flex items-center gap-1">Hourly rate <span class="text-slate-400 font-normal">(saved on this device)</span></label>
+              <span class="tabular-nums" id="hourlyRateDisplay">$75/hr</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <input id="hourlyRate" type="range" min="15" max="300" step="5" value="75" class="slider-input w-full accent-blue-600" />
+              <input id="hourlyRateNumber" type="number" min="0" step="1" class="w-20 text-sm border border-slate-200 rounded-lg px-2 py-1.5 text-right" />
+            </div>
+          </div>
+
+          <!-- Estimated hours -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-medium text-slate-700">
+              <label for="hours" class="flex items-center gap-1">Estimated hours</label>
+              <span class="tabular-nums" id="hoursDisplay">20 hrs</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <input id="hours" type="range" min="1" max="200" step="1" value="20" class="slider-input w-full accent-blue-600" />
+              <input id="hoursNumber" type="number" min="0" step="1" class="w-20 text-sm border border-slate-200 rounded-lg px-2 py-1.5 text-right" />
+            </div>
+          </div>
+
+          <!-- Materials -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-medium text-slate-700">
+              <label for="materials" class="flex items-center gap-1">Materials / software</label>
+              <span class="tabular-nums" id="materialsDisplay">$150</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <input id="materials" type="range" min="0" max="5000" step="25" value="150" class="slider-input w-full accent-blue-600" />
+              <input id="materialsNumber" type="number" min="0" step="1" class="w-24 text-sm border border-slate-200 rounded-lg px-2 py-1.5 text-right" />
+            </div>
+          </div>
+
+          <!-- Tax buffer -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-medium text-slate-700">
+              <label for="taxBuffer" class="flex items-center gap-1">Tax buffer</label>
+              <span class="tabular-nums" id="taxBufferDisplay">20%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <input id="taxBuffer" type="range" min="0" max="40" step="1" value="20" class="slider-input w-full accent-blue-600" />
+              <input id="taxBufferNumber" type="number" min="0" max="100" step="1" class="w-20 text-sm border border-slate-200 rounded-lg px-2 py-1.5 text-right" />
+            </div>
+          </div>
+
+          <!-- Profit margin -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-medium text-slate-700">
+              <label for="profitMargin" class="flex items-center gap-1">Profit margin</label>
+              <span class="tabular-nums" id="profitMarginDisplay">10%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <input id="profitMargin" type="range" min="0" max="60" step="1" value="10" class="slider-input w-full accent-blue-600" />
+              <input id="profitMarginNumber" type="number" min="0" max="100" step="1" class="w-20 text-sm border border-slate-200 rounded-lg px-2 py-1.5 text-right" />
+            </div>
+          </div>
+
+          <!-- Optional: project label & client name -->
+          <div class="space-y-2">
+            <label for="clientName" class="text-xs font-medium text-slate-700 flex items-center justify-between">
+              <span>Client name (optional)</span>
+            </label>
+            <input id="clientName" type="text" placeholder="e.g. Sarah" class="w-full text-sm border border-slate-200 rounded-lg px-3 py-2" />
+          </div>
+
+          <div class="space-y-2">
+            <label for="projectLabel" class="text-xs font-medium text-slate-700 flex items-center justify-between">
+              <span>Project label (optional)</span>
+            </label>
+            <input id="projectLabel" type="text" placeholder="e.g. Website redesign" class="w-full text-sm border border-slate-200 rounded-lg px-3 py-2" />
+          </div>
+        </div>
+
+        <!-- Live breakdown -->
+        <div class="mt-4 border-t border-slate-100 pt-4 grid gap-4 sm:grid-cols-3 text-xs sm:text-sm text-slate-700">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between">
+              <span>Labor subtotal</span>
+              <span class="tabular-nums font-medium" id="laborSubtotalDisplay">$1,500</span>
+            </div>
+            <p class="text-[11px] text-slate-500">Hourly rate × estimated hours.</p>
+          </div>
+          <div class="space-y-1">
+            <div class="flex items-center justify-between">
+              <span>Materials / software</span>
+              <span class="tabular-nums font-medium" id="materialsSubtotalDisplay">$150</span>
+            </div>
+            <p class="text-[11px] text-slate-500">Pass-through costs you need to cover.</p>
+          </div>
+          <div class="space-y-1">
+            <div class="flex items-center justify-between">
+              <span>Tax + profit buffers</span>
+              <span class="tabular-nums font-medium" id="bufferAmountDisplay">$330</span>
+            </div>
+            <p class="text-[11px] text-slate-500">Extra to cover taxes and future growth.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO / niche variants -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 space-y-4" aria-label="Specialized quote calculators">
+        <h2 class="text-sm font-semibold text-slate-900">Specialized modes (same calculator, tailored copy)</h2>
+        <p class="text-xs text-slate-600">Switch the tone of your ready-to-send message without changing your numbers.</p>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <button data-mode="generic" class="mode-btn inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-300 bg-slate-900 text-white font-medium">General contractor</button>
+          <button data-mode="designer" class="mode-btn inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-800">Graphic design quote generator</button>
+          <button data-mode="handyman" class="mode-btn inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-800">Handyman instant estimate tool</button>
+          <button data-mode="writer" class="mode-btn inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-slate-800">Freelance writer rate calculator</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Right column: total + copy-paste + monetization -->
+    <section class="space-y-6">
+      <!-- Total quote -->
+      <div class="bg-slate-900 text-slate-50 rounded-2xl shadow-md p-5 sm:p-6 space-y-4">
+        <div class="flex items-center justify-between gap-3">
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400 font-semibold">Total quote</p>
+            <p class="mt-1 text-[11px] text-slate-400">This is what you can confidently say on the call.</p>
+          </div>
+          <div class="text-right">
+            <p class="text-xs text-slate-300">Currency</p>
+            <select id="currencySelect" class="mt-1 bg-slate-800 border border-slate-700 text-xs rounded-lg px-2 py-1">
+              <option value="USD" selected>USD $</option>
+              <option value="EUR">EUR €</option>
+              <option value="GBP">GBP £</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <p id="totalDisplay" class="text-3xl sm:text-4xl font-semibold tracking-tight tabular-nums">$1,980</p>
+            <p class="mt-1 text-xs text-slate-300" id="totalExplanation">Includes labor, materials, tax buffer and profit margin.</p>
+          </div>
+          <button id="roundTotalBtn" type="button" class="text-[11px] font-medium text-slate-100 border border-slate-500/60 hover:border-slate-300 rounded-full px-3 py-1">Round to clean number</button>
+        </div>
+        <p class="text-[11px] text-slate-400">Disclaimer: This tool helps you talk through an estimate. It is not legal, tax, or accounting advice.</p>
+      </div>
+
+      <!-- Copy-paste box -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <div>
+            <h2 class="text-sm font-semibold text-slate-900">Client-ready message</h2>
+            <p class="text-[11px] text-slate-600">Auto-updates as you change numbers. Edit before sending if you like.</p>
+          </div>
+          <button id="copyMessageBtn" type="button" class="inline-flex items-center gap-1 text-xs font-medium text-blue-700 hover:text-blue-900">
+            <span>Copy</span>
+          </button>
+        </div>
+        <textarea id="quoteMessage" rows="7" class="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 font-mono leading-relaxed bg-slate-50/60"></textarea>
+        <p id="copyFeedback" class="text-[11px] text-emerald-600 hidden">Copied to clipboard.</p>
+      </div>
+
+      <!-- Recommended tools / monetization -->
+      <section class="space-y-3" aria-label="Recommended tools">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-5 space-y-3">
+          <h2 class="text-sm font-semibold text-slate-900">Recommended tools for contractors</h2>
+          <p class="text-[11px] text-slate-600">These are third‑party services. Some links can be affiliate links when you deploy this.</p>
+          <div class="space-y-2 text-xs">
+            <a href="#" class="flex items-start justify-between gap-3 border border-slate-200 hover:border-blue-500/70 rounded-xl px-3 py-2.5">
+              <div>
+                <p class="font-medium text-slate-900">Send a real invoice in minutes</p>
+                <p class="text-[11px] text-slate-600">Export this estimate into professional invoices with FreshBooks, QuickBooks, or a similar tool.</p>
+              </div>
+              <span class="shrink-0 text-[10px] font-semibold text-blue-700 bg-blue-50 rounded-full px-2 py-0.5">Ad spot</span>
+            </a>
+            <a href="#" class="flex items-start justify-between gap-3 border border-slate-200 hover:border-blue-500/70 rounded-xl px-3 py-2.5">
+              <div>
+                <p class="font-medium text-slate-900">Lock it in with a contract</p>
+                <p class="text-[11px] text-slate-600">Use LegalZoom or contract templates to turn your quote into a signed agreement.</p>
+              </div>
+              <span class="shrink-0 text-[10px] font-semibold text-blue-700 bg-blue-50 rounded-full px-2 py-0.5">Ad spot</span>
+            </a>
+            <a href="#" class="flex items-start justify-between gap-3 border border-slate-200 hover:border-blue-500/70 rounded-xl px-3 py-2.5">
+              <div>
+                <p class="font-medium text-slate-900">Get insured for bigger jobs</p>
+                <p class="text-[11px] text-slate-600">Once this tool gets traffic, this area can be sponsored by small‑business insurance providers.</p>
+              </div>
+              <span class="shrink-0 text-[10px] font-semibold text-blue-700 bg-blue-50 rounded-full px-2 py-0.5">Lead gen</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 text-slate-50 rounded-2xl shadow-md p-4 sm:p-5 space-y-3">
+          <h2 class="text-sm font-semibold">Optional: Upgrade with a contract template</h2>
+          <p class="text-xs text-slate-200">You can connect this button to Gumroad or Stripe Checkout to sell a $5 PDF contract without running your own backend.</p>
+          <a href="#" class="inline-flex items-center justify-center w-full text-sm font-medium rounded-lg bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-3 py-2.5">Download a matching contract template ($5)</a>
+          <p class="text-[11px] text-slate-300">On your live site, replace the link with your payment/checkout URL.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white mt-10">
+    <div class="max-w-5xl mx-auto px-4 py-6 text-[11px] sm:text-xs text-slate-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+      <p>Use this tool as a starting point, then adjust based on your market, scope, and client relationship.</p>
+      <p class="text-slate-400">SEO idea: create separate landing URLs targeting designers, handymen, and writers using this same calculator core.</p>
+    </div>
+  </footer>
+
+  <script>
+    const elements = {
+      hourlyRate: document.getElementById('hourlyRate'),
+      hourlyRateNumber: document.getElementById('hourlyRateNumber'),
+      hourlyRateDisplay: document.getElementById('hourlyRateDisplay'),
+      hours: document.getElementById('hours'),
+      hoursNumber: document.getElementById('hoursNumber'),
+      hoursDisplay: document.getElementById('hoursDisplay'),
+      materials: document.getElementById('materials'),
+      materialsNumber: document.getElementById('materialsNumber'),
+      materialsDisplay: document.getElementById('materialsDisplay'),
+      taxBuffer: document.getElementById('taxBuffer'),
+      taxBufferNumber: document.getElementById('taxBufferNumber'),
+      taxBufferDisplay: document.getElementById('taxBufferDisplay'),
+      profitMargin: document.getElementById('profitMargin'),
+      profitMarginNumber: document.getElementById('profitMarginNumber'),
+      profitMarginDisplay: document.getElementById('profitMarginDisplay'),
+      clientName: document.getElementById('clientName'),
+      projectLabel: document.getElementById('projectLabel'),
+      laborSubtotalDisplay: document.getElementById('laborSubtotalDisplay'),
+      materialsSubtotalDisplay: document.getElementById('materialsSubtotalDisplay'),
+      bufferAmountDisplay: document.getElementById('bufferAmountDisplay'),
+      totalDisplay: document.getElementById('totalDisplay'),
+      totalExplanation: document.getElementById('totalExplanation'),
+      quoteMessage: document.getElementById('quoteMessage'),
+      copyMessageBtn: document.getElementById('copyMessageBtn'),
+      copyFeedback: document.getElementById('copyFeedback'),
+      roundTotalBtn: document.getElementById('roundTotalBtn'),
+      resetBtn: document.getElementById('resetBtn'),
+      currencySelect: document.getElementById('currencySelect'),
+    };
+
+    const CURRENCY_SYMBOLS = { USD: '$', EUR: '€', GBP: '£' };
+
+    let currentMode = 'generic';
+    let roundedOverride = null; // if user rounds, remember temporary value for display & message
+
+    function formatCurrency(amount, currency) {
+      const symbol = CURRENCY_SYMBOLS[currency] || '$';
+      return symbol + amount.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
+
+    function syncPair(rangeEl, numberEl, displayEl, suffix, isCurrency = false) {
+      const value = parseFloat(rangeEl.value) || 0;
+      if (numberEl) numberEl.value = value;
+      if (displayEl) {
+        if (isCurrency) {
+          displayEl.textContent = formatCurrency(value, elements.currencySelect.value) + (suffix || '');
+        } else {
+          displayEl.textContent = value + (suffix || '');
+        }
+      }
+    }
+
+    function calculateTotals() {
+      const rate = parseFloat(elements.hourlyRate.value) || 0;
+      const hours = parseFloat(elements.hours.value) || 0;
+      const materials = parseFloat(elements.materials.value) || 0;
+      const taxPct = parseFloat(elements.taxBuffer.value) || 0;
+      const profitPct = parseFloat(elements.profitMargin.value) || 0;
+
+      const laborSubtotal = rate * hours;
+      const base = laborSubtotal + materials;
+      const bufferAmount = base * ((taxPct + profitPct) / 100);
+      const totalRaw = base + bufferAmount;
+
+      const currency = elements.currencySelect.value;
+
+      elements.laborSubtotalDisplay.textContent = formatCurrency(Math.round(laborSubtotal), currency);
+      elements.materialsSubtotalDisplay.textContent = formatCurrency(Math.round(materials), currency);
+      elements.bufferAmountDisplay.textContent = formatCurrency(Math.round(bufferAmount), currency);
+
+      const displayTotal = roundedOverride != null ? roundedOverride : totalRaw;
+      elements.totalDisplay.textContent = formatCurrency(Math.round(displayTotal), currency);
+      elements.totalExplanation.textContent = `Based on ${hours.toFixed(1)} hours at ${formatCurrency(rate, currency)} plus ${formatCurrency(materials, currency)} in materials, ${taxPct}% tax buffer, and ${profitPct}% profit margin.`;
+
+      updateMessage(totalRaw, currency, { laborSubtotal, materials, taxPct, profitPct, hours, rate });
+    }
+
+    function updateMessage(totalRaw, currency, details) {
+      const { laborSubtotal, materials, taxPct, profitPct, hours, rate } = details;
+      const finalTotal = roundedOverride != null ? roundedOverride : totalRaw;
+
+      const clientName = elements.clientName.value.trim() || 'there';
+      const projectLabel = elements.projectLabel.value.trim() || 'this project';
+
+      const totalStr = formatCurrency(Math.round(finalTotal), currency);
+      const laborStr = formatCurrency(Math.round(laborSubtotal), currency);
+      const materialsStr = formatCurrency(Math.round(materials), currency);
+
+      const baseIntroMap = {
+        generic: `Hi ${clientName}, based on our discussion, my estimated quote for ${projectLabel} is ${totalStr}.`,
+        designer: `Hi ${clientName}, based on the scope we discussed, my estimated design fee for ${projectLabel} is ${totalStr}.`,
+        handyman: `Hi ${clientName}, based on the work we talked through, my estimated cost for ${projectLabel} is ${totalStr}.`,
+        writer: `Hi ${clientName}, based on the brief we discussed, my estimated writing fee for ${projectLabel} is ${totalStr}.`,
+      };
+
+      const intro = baseIntroMap[currentMode] || baseIntroMap.generic;
+
+      const bodyMap = {
+        generic: `This includes approximately ${hours.toFixed(1)} hours of labor (${laborStr}) at ${formatCurrency(rate, currency)} per hour, plus about ${materialsStr} for materials or software.`,
+        designer: `This includes approximately ${hours.toFixed(1)} hours of design and revisions (${laborStr}) at ${formatCurrency(rate, currency)} per hour, plus around ${materialsStr} for fonts, stock assets, or tools.`,
+        handyman: `This includes approximately ${hours.toFixed(1)} hours of labor (${laborStr}) at ${formatCurrency(rate, currency)} per hour, plus about ${materialsStr} for parts, supplies, and disposal if needed.`,
+        writer: `This includes approximately ${hours.toFixed(1)} hours for research, writing, and revisions (${laborStr}) at ${formatCurrency(rate, currency)} per hour, plus about ${materialsStr} for any reference materials or tools if required.`,
+      };
+
+      const bufferLine = `I've also built in roughly ${taxPct}% for taxes and ${profitPct}% for profit so the project remains sustainable on my end while still being fair to you.`;
+      const closing = `Let me know if this works for you or if we should adjust the scope to fit a specific budget.
+
+Best,
+[Your Name]`;
+
+      const message = `${intro}
+
+${bodyMap[currentMode] || bodyMap.generic}
+${bufferLine}
+
+${closing}`;
+
+      elements.quoteMessage.value = message;
+    }
+
+    function initLocalStorage() {
+      const storedRate = localStorage.getItem('ciq_hourlyRate');
+      if (storedRate && !isNaN(parseFloat(storedRate))) {
+        elements.hourlyRate.value = parseFloat(storedRate);
+      }
+      syncPair(elements.hourlyRate, elements.hourlyRateNumber, elements.hourlyRateDisplay, '/hr', true);
+
+      elements.hourlyRate.addEventListener('input', () => {
+        localStorage.setItem('ciq_hourlyRate', elements.hourlyRate.value);
+      });
+      elements.hourlyRateNumber.addEventListener('input', () => {
+        const v = parseFloat(elements.hourlyRateNumber.value) || 0;
+        elements.hourlyRate.value = v;
+        localStorage.setItem('ciq_hourlyRate', v);
+        syncPair(elements.hourlyRate, elements.hourlyRateNumber, elements.hourlyRateDisplay, '/hr', true);
+        roundedOverride = null;
+        calculateTotals();
+      });
+    }
+
+    function wireInputSync() {
+      const config = [
+        { range: 'hourlyRate', number: 'hourlyRateNumber', display: 'hourlyRateDisplay', suffix: '/hr', isCurrency: true },
+        { range: 'hours', number: 'hoursNumber', display: 'hoursDisplay', suffix: ' hrs' },
+        { range: 'materials', number: 'materialsNumber', display: 'materialsDisplay', suffix: '', isCurrency: true },
+        { range: 'taxBuffer', number: 'taxBufferNumber', display: 'taxBufferDisplay', suffix: '%' },
+        { range: 'profitMargin', number: 'profitMarginNumber', display: 'profitMarginDisplay', suffix: '%' },
+      ];
+
+      config.forEach(({ range, number, display, suffix, isCurrency }) => {
+        const rangeEl = elements[range];
+        const numberEl = elements[number];
+        const displayEl = elements[display];
+
+        syncPair(rangeEl, numberEl, displayEl, suffix, isCurrency);
+
+        rangeEl.addEventListener('input', () => {
+          syncPair(rangeEl, numberEl, displayEl, suffix, isCurrency);
+          roundedOverride = null;
+          calculateTotals();
+        });
+        numberEl.addEventListener('input', () => {
+          let value = parseFloat(numberEl.value) || 0;
+          if (rangeEl.min !== undefined) {
+            const min = parseFloat(rangeEl.min);
+            const max = parseFloat(rangeEl.max);
+            if (!isNaN(min)) value = Math.max(value, min);
+            if (!isNaN(max)) value = Math.min(value, max);
+          }
+          rangeEl.value = value;
+          syncPair(rangeEl, numberEl, displayEl, suffix, isCurrency);
+          roundedOverride = null;
+          calculateTotals();
+        });
+      });
+    }
+
+    function wireButtons() {
+      elements.copyMessageBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(elements.quoteMessage.value);
+          elements.copyFeedback.classList.remove('hidden');
+          setTimeout(() => elements.copyFeedback.classList.add('hidden'), 2000);
+        } catch (e) {
+          alert('Copy failed. Please select and copy manually.');
+        }
+      });
+
+      elements.roundTotalBtn.addEventListener('click', () => {
+        const rate = parseFloat(elements.hourlyRate.value) || 0;
+        const hours = parseFloat(elements.hours.value) || 0;
+        const materials = parseFloat(elements.materials.value) || 0;
+        const taxPct = parseFloat(elements.taxBuffer.value) || 0;
+        const profitPct = parseFloat(elements.profitMargin.value) || 0;
+        const base = rate * hours + materials;
+        const bufferAmount = base * ((taxPct + profitPct) / 100);
+        const totalRaw = base + bufferAmount;
+
+        const rounded = Math.round(totalRaw / 50) * 50;
+        roundedOverride = rounded;
+        calculateTotals();
+      });
+
+      elements.resetBtn.addEventListener('click', () => {
+        elements.hourlyRate.value = localStorage.getItem('ciq_hourlyRate') || 75;
+        elements.hours.value = 20;
+        elements.materials.value = 150;
+        elements.taxBuffer.value = 20;
+        elements.profitMargin.value = 10;
+        elements.clientName.value = '';
+        elements.projectLabel.value = '';
+        roundedOverride = null;
+        wireInputSync();
+        calculateTotals();
+      });
+
+      elements.currencySelect.addEventListener('change', () => {
+        roundedOverride = null;
+        wireInputSync();
+        calculateTotals();
+      });
+
+      document.querySelectorAll('.mode-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          currentMode = btn.getAttribute('data-mode') || 'generic';
+          document.querySelectorAll('.mode-btn').forEach((b) => {
+            b.classList.remove('bg-slate-900', 'text-white', 'border-slate-300');
+            b.classList.add('bg-slate-50', 'text-slate-800', 'border-slate-200');
+          });
+          btn.classList.remove('bg-slate-50', 'text-slate-800', 'border-slate-200');
+          btn.classList.add('bg-slate-900', 'text-white', 'border-slate-300');
+          calculateTotals();
+        });
+      });
+
+      elements.clientName.addEventListener('input', () => {
+        calculateTotals();
+      });
+      elements.projectLabel.addEventListener('input', () => {
+        calculateTotals();
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initLocalStorage();
+      wireInputSync();
+      wireButtons();
+      calculateTotals();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Contractor's Instant Quote - robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: 
+
+# Allow crawling of specific paths
+Allow: /
+Allow: *.html
+Allow: *.css
+Allow: *.js
+
+# Sitemap location
+Sitemap: https://contractors-instant-quote.com/sitemap.xml
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
